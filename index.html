@@ -1,79 +1,70 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-    <title>Johan Nilsson</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!--<script src="script.js"></script> -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.collagePlus.min.js"></script>
-    <script type="text/javascript" src="js/jquery.removeWhitespace.min.js"></script>
-    <script type="text/javascript" src="js/jquery.collageCaption.min.js"></script>
-	<script type="text/javascript"> 
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		// All images need to be loaded for this plugin to work so
-            // we end up waiting for the whole window to load in this example
-            $(window).load(function () {
-                $(document).ready(function(){
-                    collage();
-                    $('.Collage').collageCaption();
-                });
-            });
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-
-            // Here we apply the actual CollagePlus plugin
-            function collage() {
-                $('.Collage').removeWhitespace().collagePlus(
-                    {
-                        'fadeSpeed'     : 200,
-                        'targetHeight'  : 200,
-                        'direction'     : 'vertical',
-                        'allowPartialLastRow' : true,
-                    }
-                );
-            };
-
-             // This is just for the case that the browser window is resized
-            var resizeTimer = null;
-            $(window).bind('resize', function() {
-                // set a timer to re-apply the plugin
-                if (resizeTimer) clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(collage, 200);
-            });
-
-			
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <img src="img/header.jpg" />
+            <h1>Johan Nilsson</h1>
+        </header>
+        <div id="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="gallery.html">Galleri</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <article>
+                <div class="blog_entry">
+                    <h3><a href="#">Det här är ett blogginlägg</a></h3>
+                        <p>Bacon ipsum dolor sit amet hamburger kielbasa shoulder tongue spare ribs, leberkas sausage bresaola cow. Tongue drumstick ground round, short loin meatball shankle rump biltong pork loin turkey pork belly. Jerky short loin cow meatloaf porchetta. Doner bacon kevin chicken strip steak beef ribs ribeye brisket beef boudin ground round sirloin.</p>
+                        <img src="img/bild_inlagg.jpg" />
+                        <p>Leberkas venison sausage brisket kevin doner jowl jerky strip steak tongue pig turducken. Sirloin pork loin jerky fatback, leberkas turkey ground round chicken pancetta bacon kielbasa porchetta shankle rump prosciutto. Pork belly shank rump corned beef meatball kevin frankfurter kielbasa. T-bone ham hock salami tri-tip, filet mignon boudin short loin kielbasa beef ribs. Salami strip steak ball tip pig capicola, spare ribs sausage shoulder bacon shank brisket flank cow meatball filet mignon. Corned beef beef ribs shankle, fatback hamburger tail short ribs shank spare ribs ham hock rump pastrami biltong brisket. Ham prosciutto jerky jowl venison corned beef pig doner spare ribs landjaeger kielbasa turducken pork belly fatback brisket.</p>
+                </div><!-- .blog_entry -->
+                
+                <div class="blog_entry">
+                    <h3><a href="#">Det här är ett blogginlägg</a></h3>
+                        <p>Bacon ipsum dolor sit amet <a href="#">hamburger kielbasa shoulder tongue spare ribs</a>, leberkas sausage bresaola cow. Tongue drumstick ground round, short loin meatball shankle rump biltong pork loin turkey pork belly. Jerky short loin cow meatloaf porchetta. Doner bacon kevin chicken strip steak beef ribs ribeye brisket beef boudin ground round sirloin.</p>
+                        <p>Leberkas venison sausage brisket kevin doner jowl jerky strip steak tongue pig turducken. Sirloin pork loin jerky fatback, leberkas turkey ground round chicken pancetta bacon kielbasa porchetta shankle rump prosciutto. Pork belly shank rump corned beef meatball kevin frankfurter kielbasa. T-bone ham hock salami tri-tip, filet mignon boudin short loin kielbasa beef ribs. Salami strip steak ball tip pig capicola, spare ribs sausage shoulder bacon shank brisket flank cow meatball filet mignon. Corned beef beef ribs shankle, fatback hamburger tail short ribs shank spare ribs ham hock rump pastrami biltong brisket. Ham prosciutto jerky jowl venison corned beef pig doner spare ribs landjaeger kielbasa turducken pork belly fatback brisket.</p>
+                </div><!-- .blog_entry -->
+            </article>
+        </div><!-- #wrapper -->
+        <footer></footer>
+        
+        
         
 
-		</script>
-</head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
 
-<body>
-	<div id="wrapper">
-		<header>
-		<h1>Johan Nilsson</h1>
-		</header>
-		<nav>
-			<ul>
-				<li><a>Startsida</a></li>
-				<li><a>Bilder</a></li>
-				<li><a>Kontakt</a></li>
-			</ul>
-		</nav>
-		<article>
-			<div class="Collage">
-				<img src="http://placehold.it/350x150"><img src="http://placehold.it/400x300"><img src="http://placehold.it/290x800">
-				<img src="http://placehold.it/350x150"><img src="http://placehold.it/400x300"><img src="http://placehold.it/290x800"><img src="http://placehold.it/350x150"><img src="http://placehold.it/400x300">
-			</div>
-
-		
-		</article>
-		<footer>
-		<p>Här är footern</p>
-		</footer>
-	</div>
-	
-</body>
-
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
 </html>
-
