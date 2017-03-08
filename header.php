@@ -1,4 +1,3 @@
-
     <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -14,7 +13,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/normalize.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/main.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/main.css?v=1.0.3">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
         <script src="<?php bloginfo('template_directory') ?>/js/vendor/modernizr-2.6.2.min.js"></script>
         <!-- jquery -->
@@ -69,7 +68,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
-            <img src="<?php bloginfo('template_directory') ?>/img/header.jpg" />
+            <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
             <h1><?php bloginfo('name'); ?></h1>
         </header>
         <div id="wrapper">

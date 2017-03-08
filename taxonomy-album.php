@@ -2,7 +2,8 @@
 get_header();
 ?>
 <article>
-    <h1 class="album_name"><?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name; ?></h1>
+    
+    <p class="album_name"><?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name; ?></p>
     <div class="Collage">
 <?php
 /*$categories = get_the_category();

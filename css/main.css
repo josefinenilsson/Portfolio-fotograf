@@ -104,49 +104,43 @@ body{
 
 header{
     width: 100%;
-
+    height: auto;
     
 }
     header img{
         width:100%;
-        
+        height: auto;
     
     }
     
     header h1{
-        font-size: 2.5em;
+        font-size: 4em;
         font-family: 'Open Sans', sans-serif;
+        margin-top: -130px;
+        margin-bottom: 50px;
         text-align: center;
-        width: 100%;
-        color: black;
-        margin: 0;
-        margin-top: 10px;
+        color: white;
+        text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.22);
 
     }
 
 #wrapper{
-
+    width: 100%;
 }
 
     nav{
         text-align: center;
-        padding-top: 20px;
         
     }
     
         nav ul{
-            margin-top: -5px;
-            border-bottom: 1px solid #DCD9DE;
-            border-top: 1px solid #DCD9DE;
-            padding-top: 20px;
+            padding-top: 30px;
+            padding-left: 0px;
         
         }
             nav ul li{
                 display:inline-block;
                 padding: 22px;
-                padding-top: 0px;
-                padding-bottom: 20px;
-                margin-right: 30px;
                 
  
                 
@@ -154,7 +148,7 @@ header{
                 nav ul li a{
                     color: #000;
                     text-decoration: none;
-                    font-size: 1.4em;
+                    font-size: 1.3em;
                     
                 
                 }
@@ -170,14 +164,16 @@ header{
             width: 600px;
             margin: auto;
             padding-bottom: 20px;
-            margin-bottom: 80px;
-            border-bottom: 1px #DCD9DE solid;
-            padding-top: 5px;
+            padding-top: 20px;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            border-bottom: 1px #000;
  
         }
             .blog_entry h3{
                 text-align: center;
                 font-size: 2em;
+                margin: 0.5em 0;
             }
             .blog_entry h3 a{
                 color: #000;
@@ -194,14 +190,11 @@ header{
                     margin-left: 15px;
                 }
                     .blog_entry img{
-                        width: 100%;
-                        max-width: 600px;
+                        width: 500px;
                         height: auto;
-                       
-                    }
-                    .wp-caption{
-                        width: 100%!important;
-                        max-width: 100%;
+                        padding-left: 40px;
+                        padding-right: 25px;
+                        padding-top: 15px;
                     }
                     .blog_entry p a{
                         color: #707070;
@@ -210,51 +203,99 @@ header{
                     .blog_entry p a:hover{
                         text-decoration: underline;
                     }
-footer{
+.wp-caption {
+    max-width: 100%;
 }
 
-.footer{
-    padding: 10px;
-    width: 100%;
+.wp-caption-text{
+    margin-left: 40px!important;
+    margin-top: 5px;
+    font-style: italic;
+}
+.page_number{
     text-align: center;
-    color:#DCD9DE;
-    font-size: 0.6em;
+}
+.page_number a{
+    text-decoration: none;
+    color: #000;
+}
+.page-numbers.current{
+    font-weight: 600;
+}
+
+footer{
+    text-align: center;
+    font-size: 0.7em;
 }
 
 
-/* Gallerisidan */
-    
+
+/* ==========================================================================
+                              Galleri sidan
+   ========================================================================== */
+
     .gallery_box{
-        width: 800px;
+        width: 1000px;
         margin: auto;
-        padding-top: 50px;
-        padding-bottom: 50px;
         
     }
          .category{
-            display: inline-block;
-            width:200px;
-            padding-left: 50px;
-            padding-bottom: 5px;
-            padding-top: 5px;
+            font-family: "Open Sans", sans-serif;
+            width: 300px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+             display: inline-block;
+             margin-left: 1%;
+             position: relative;
         }
-          
-            .category_name a{
-                color: #000;
-                text-decoration: none;
-            }
-            .category_name a:hover{
-            }
+
+        .category_image_box{
+            background-color: #000;
+ 
+        }
+    
+        .category_image{
+            width: 100%;
+            height: auto;
+            transform: scale(1);
+            transition: 0.2s all ease;
+        }
+
+        .category_info{
+            font-weight: 400;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            transform: translateY(-50%) scale(2);
+            opacity: 0;
+            color: #fff;
+            transition: 0.2s all ease;
+        }
+        .category_name{
+        }
+        .category_description{
+        }
+        .category:hover .category_info{
+            transform: translateY(-50%) scale(1);
+            opacity: 1;
+            transition: 0.2s all ease;
+        }
+        .category:hover .category_image{
+            opacity: 0.5;
+            transition: 0.2s all ease;
+            transform: scale(1.1);
+        }
+        
 
 .cat-item{
         display: inline-block;
-        width:300px;
-        padding:25px;
+        width:200px;
+        padding-left: 50px;
+        padding-bottom: 5px;
+        padding-top: 50px;
         font-size: 1.5em;
         text-align: center;
-        padding-left: 25px;
-        border: 1px solid #DCD9DE;
-        margin: 15px;
 }
 
 .cat-item a{
@@ -300,8 +341,9 @@ footer{
         font-family: "century gothic";
     }
 
-/* Albumsidan  */
-
+/* ==========================================================================
+                              Album sidan
+   ========================================================================== */
 .album_name{
     text-align: center;
     font-weight: bold;
@@ -319,15 +361,68 @@ footer{
         width: 600px;
         margin: auto;
     }
+/* ==========================================================================
+                        Kod som gör sidan responsiv
+   ========================================================================== */
 
-
-
-
-
-
-
-
-
+@media (max-width:440px){
+    #wrapper{
+        max-width: 320px;
+        width: 100%;
+        margin: auto;
+    }
+    header h1{
+        font-size: 2.5em;
+        margin-top: -100px;
+    }
+    .blog_entry{
+        width: 320px;
+    }
+    .blog_entry img{
+        width: 320px;
+        padding-left: 15px;
+    }
+    .blog_entry p {
+    margin-left: 30px;
+}
+    .gallery_box{
+        width:320px;
+    }
+    .category{
+        width: 280px;
+    }
+    .wp-caption-text{
+    margin-left: 15px!important;
+    margin-top: 5px;
+}
+    
+}
+@media (min-width:440px) and (max-width:670px){
+    #wrapper{
+        max-width: 440px;
+        width: 100%;
+        margin: auto;
+    }
+    .blog_entry{
+        width: 440px;
+    }
+    .blog_entry img{
+        width: 440px;
+        padding-left: 0px;
+    }
+    .gallery_box{
+        width:440px;
+    }
+    .category{
+        width: 380px;
+        
+    }
+    .wp-caption-text{
+    margin-left: 0!important;
+    margin-top: 5px;
+}
+    
+}
 
 /* ==========================================================================
    Helper classes
